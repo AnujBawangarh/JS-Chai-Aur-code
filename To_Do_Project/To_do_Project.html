@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Application</title>
+    <link rel="stylesheet" href="To_do.css">
+</head>
+<body>
+<div>
+    <h1>
+    Welcome to your own <span id="design">TO DO Application</span>.
+    </h1>
+</div>
+
+<div>
+   <marquee behavior="" direction="">
+    <h2>
+    Hare Krishna!!
+    Trying to be your task Partner.
+    </h2>
+   </marquee> 
+</div>
+
+<div id="todo">
+    <input type="text", placeholder="Enter your Task" id="bar">
+    <button onclick="addtodo()" id="addbtn">Add TO DO!</button>
+</div>
+
+<script>
+
+// This is also a very good way of using DOM but there is one such a approach which will make the life of a frontend developer more easy.We can use the STATE and COMPONENTS.
+
+    function addtodo(){
+const input = document.querySelector("input"); 
+        const value = input.value.trim();
+
+        if (value === '') return;
+
+const checkbox = document.createElement('input');
+const spanEl = document.createElement("span");
+const ButtonEl = document.createElement("Button");
+
+spanEl.innerHTML = value; 
+ButtonEl.innerHTML = "Delete";
+checkbox.type = "checkbox";
+////
+const NewEleDiv = document.createElement("div");
+NewEleDiv.appendChild(checkbox);
+NewEleDiv.appendChild(spanEl);
+NewEleDiv.appendChild(ButtonEl);
+
+document.querySelector("body").appendChild(NewEleDiv);
+
+ButtonEl.addEventListener('click', () => {
+    NewEleDiv.remove();
+});
+
+checkbox.addEventListener('change', () => {
+    if(checkbox.checked){
+        spanEl.style.opacity = "0.5";
+        spanEl.style.textDecoration = "line-through";
+    }
+    else{
+        spanEl.style.opacity = 1;
+        spanEl.style.textDecoration = "none";
+    }   
+});
+
+input.value = "";
+
+}
+
+document.querySelector("input").addEventListener('keypress', (e) => {
+        if (e.key === "Enter") {
+            addtodo();
+        }
+    });
+
+document.querySelector("#addbtn").addEventListener('click', (e) => {
+    const button = e.target;
+    button.classList.add('click'); // add the class
+    setTimeout(function(){
+        button.classList.remove('click'); // remove after 200ms
+    }, 200);
+});
+
+
+</script>
+</body>
+</html>
+

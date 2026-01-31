@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: darkseagreen;">
+    <h1>Hare Krishna!!</h1>
+    <ul class="language">
+        <li>Krishna</li>
+        <li>Madanmohan</li>
+        <li>Gopijanavallabh</li>
+        <li>Radharaman</li>
+    </ul>
+</body>
+<script>
+    //adding elements  
+    function addOptiLanguage (newLanguage) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(newLanguage))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('Bankey Bihari');
+
+    // Editing the page.
+    const secondLanguage = document.querySelector("li:nth-child(3)")
+    const newli = document.createElement("li");
+    newli.innerText = 'Gopiprandhana';
+    secondLanguage.replaceWith(newli)
+
+    // Editing by using outer HTML
+    const firstname = document.querySelector('li:first-child')
+    firstname.outerHTML = '<li>Kanha</li>'
+
+    // Remove by using remove()
+    const lastname = document.querySelector("li:last-child");
+    lastname.remove()
+</script>
+</html>

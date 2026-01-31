@@ -1,0 +1,47 @@
+body{
+    background-color:whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Lucida Sans Unicode';
+    font-weight: bolder;
+
+}
+
+#design {
+ font-size: larger;
+ font-family: 'Times New Roman', Times, serif;
+ color: rgb(5, 104, 5);
+}
+
+h2{
+    font-family: monospace;
+}
+
+#todo {
+    text-align: center;
+    }
+
+#bar, #addbtn{
+    font-size: large;
+}
+
+#addbtn {
+    font-family: fantasy;
+    box-shadow: 3px 3px 0px 0px grey;
+    border-radius: 5px;
+}
+
+#bar {
+    border-radius: 5px;
+}
+
+
+button {
+        transition: transform 0.2s ease;
+    }
+
+button.click {
+        transform: scale(0.9);
+    }

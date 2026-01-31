@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+#DOM{
+    background: #212121;
+    color: aliceblue;
+}
+    </style>
+</head>
+<body id = 'DOM'>
+    <div id="container">
+        <h1 id="ele" class="ment">DOM learning with chai aur code <span style="display: none;"> test code.</span></h1>
+        <h2>Hare krishna!!!</h2>
+        <h2>Jay Shree Ram!!!</h2>
+    <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam dicta provident totam voluptate tempore accusantium magni quod facere repellendus aperiam quam, tenetur officiis doloremque laboriosam harum quae dignissimos fugit nobis?
+    Voluptas quibusdam, sit itaque inventore unde officia suscipit aut laboriosam eaque explicabo aspernatur totam eos obcaecati temporibus!</P>
+    </div>
+    <div id="button">
+        <button>
+            Click me!
+        </button>
+    </div>
+</body>
+<script>
+
+    // Basic DOM Manipulation.
+    const title = document.getElementById('ele');
+    console.log(title);
+    title.textContent = 'Hare Krishna DOM !!!';
+    title.style.color = 'orange';
+
+    // dynamically added elements.
+    const first = document.getElementById('container');
+    const second = document.createElement('p');
+    second.textContent = 'Dynamically added paragraph.' 
+    container.appendChild(second);  
+
+    // styling the button.
+    const button = document.getElementById('button');
+    console.log(button);
+    
+
+</script>
+</html> 
